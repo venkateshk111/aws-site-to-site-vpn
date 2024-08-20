@@ -254,7 +254,7 @@ Extend your on-premises networks to the cloud
 
 - ### Testing SSH 
 
-    - Copy the pem files of other EC2 to Onprem and AWS EC2 and test the login via ssh
+    - Copy the pem files to EC2 Onprem and AWS EC2 and test the login via ssh
 
         ![SSH Test](./imgs/11-ssh-test.png)
 
