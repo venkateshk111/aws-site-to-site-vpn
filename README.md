@@ -260,6 +260,16 @@ Extend your on-premises networks to the cloud
 
 
 
+## Resource Cleanup
+
+- Delete EC2 in both regions
+- Delete EC2 Security Group
+- Delete key-pair (if no longer required)
+- Delete VPN connection
+- Delete VGW
+- Delete CGW
+- Delete VPC in both regions
+
 
 ## Pricing
 - **Not Free tier eligible**
