@@ -52,7 +52,7 @@ Extend your on-premises networks to the cloud
 1. ### Simulating On-premises data center
     - AWS Region : Mumbai (ap-south-1)
     - VPC
-        - Create VPC with CIDR : 10.0.0.0/16
+        - Create VPC with CIDR : 172.31.0.0/16
         - Create public subnet : 172.31.0.0/20
         - Create private subnet : 172.31.128.0/20
 
@@ -66,6 +66,8 @@ Extend your on-premises networks to the cloud
         - Stop source/destination checks for this EC2
             
             ![on-prem-ec2](./imgs/03-on-prem-ec2.png)
+
+            ![on-prem-ec2-sd-check](./imgs/03-on-prem-ec2-sou-dest-check.png)
 
         - Security Group for EC2
             - Allow ssh on port 22 from MyIP ( your own IP)
@@ -93,7 +95,7 @@ Extend your on-premises networks to the cloud
             ```
             service network restart
             ```
-        - We still need to configure *`/etc/ipsec.d/aws.conf`* file, we will do this post VPC setup on AWS.
+        - We still need to configure *`/etc/ipsec.d/aws.conf`* file, we will do this post VPC setup on AWS. 
 
 2. ### Configuration on AWS Side
     - AWS Region : N.Virginia (us-east-1)
@@ -125,29 +127,29 @@ Extend your on-premises networks to the cloud
 
         ![ping-test](./imgs/05-ping-test.png)
 
-- ### Setting up Site-to-Site VPN Connection
+### Setting up Site-to-Site VPN Connection
 
-    - Create a Virtual Private Gateway and attach it to AWS VPC
-        ![VGW](./imgs/06-vgw.png)
+- Create a Virtual Private Gateway and attach it to AWS VPC
+    ![VGW](./imgs/06-vgw.png)
 
-    - Create a Customer Gateway and attach it to AWS VPC
-        - IP Address = Public IP of VPN device , our case Public IP of EC2 hosted in Mumbai region
-        - IP Address = 13.233.89.88
+- Create a Customer Gateway and attach it to AWS VPC
+    - IP Address = Public IP of VPN device , our case Public IP of EC2 hosted in Mumbai region
+    - IP Address = 13.233.89.88
 
-        ![CGW](./imgs/06-cgw.png)
+    ![CGW](./imgs/06-cgw.png)
     
-    - Create site-to-site VPN Connection
+- Create site-to-site VPN Connection
 
-        ![site-to-site-vpn](./imgs/06-site-to-site-vpn-console-1.png)
+    ![site-to-site-vpn](./imgs/06-site-to-site-vpn-console-1.png)
 
-        ![site-to-site-vpn](./imgs/06-site-to-site-vpn-console-2.png)
+    ![site-to-site-vpn](./imgs/06-site-to-site-vpn-console-2.png)
     
-    - Wait for site-to-site VPN to be provisioned
+- Wait for site-to-site VPN to be provisioned
 
-        ![site-to-site-vpn](./imgs/06-site-to-site-vpn-provisioned.png)
+    ![site-to-site-vpn](./imgs/06-site-to-site-vpn-provisioned.png)
 
 
-3. Configuration on On-Premise Side
+3. ### Configuration on On-Premise Side
     
     - Configure the customer gateway device
     - Download the configuration file from VPN Console
@@ -208,7 +210,6 @@ Extend your on-premises networks to the cloud
             ```
             13.233.89.88 34.202.212.171: PSK "9d11R8zqe9xRWbALjD6I3O3qq6BYEGN7"
             ```
-
 
     - Configure ipsec service to be ON on reboot 
 
