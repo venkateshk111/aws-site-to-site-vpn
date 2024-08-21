@@ -282,6 +282,11 @@ Extend your on-premises networks to the cloud
 - You are charged for **standard AWS data transfer charges** for all data transferred via the VPN connection. 
 - If you no longer wish to be charged for a VPN connection, simply terminate your VPN connection
 
+- Approximate pricing for hands-on lab is : **$0.40** or **INR 40**.
+
+    ![Cost](./imgs/12-pricing.png)
+
+
 ## References :
 
 
