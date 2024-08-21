@@ -50,6 +50,11 @@ Extend your on-premises networks to the cloud
 
 ## Site-to-Site VPN Hands-On
 
+- ### What are we building ?
+
+    ![Site to Site VPB ](./imgs/02-aws-site-to-site-vpn-architecture.png)
+
+
 1. ### Simulating On-premises data center
     - AWS Region : Mumbai (ap-south-1)
     - VPC
@@ -259,8 +264,6 @@ Extend your on-premises networks to the cloud
 
         ![SSH Test](./imgs/11-ssh-test.png)
 
-
-
 ## Resource Cleanup
 
 - Delete EC2 in both regions
@@ -290,8 +293,5 @@ https://aws.amazon.com/vpn/site-to-site-vpn/
 
 https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-site-to-site-vpn.html
 
-
 https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/
-
-https://kloudvm.medium.com/aws-site-to-site-vpn-using-openswan-ipsec-step-by-step-tutorial-c525a97487a3 
 
