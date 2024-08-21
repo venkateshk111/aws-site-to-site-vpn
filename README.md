@@ -4,9 +4,10 @@ Extend your on-premises networks to the cloud
 
 - AWS Site-to-Site VPN is a **fully-managed service** that creates a **secure connection between your data center or branch office and your AWS resources using IP Security (IPSec) tunnels**
 
-    ![Site-to-Site VPN](./imgs/01-site-to-site-vpn-simple.png)
+    ![Site-to-Site VPN](./imgs/01-site-to-site-vpn-venki.png)
+    <!-- ![Site-to-Site VPN](./imgs/01-site-to-site-vpn-simple.png) -->
 
-    ![Site-to-Site VPN](./imgs/02-site-to-site-vpn.png)
+    <!-- ![Site-to-Site VPN](./imgs/02-site-to-site-vpn.png) -->
 
 ## Key Terminologies
 
